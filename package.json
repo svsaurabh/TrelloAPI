@@ -12,7 +12,7 @@
     "url": "git+https://github.com/Dineshanand001/TrelloAPI.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dinesh Ananthan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Dineshanand001/TrelloAPI/issues"
@@ -20,12 +20,13 @@
   "homepage": "https://github.com/Dineshanand001/TrelloAPI#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mespeak": "^2.0.2",
     "node-fetch": "^2.6.0",
-    "node-gtts": "^2.0.2",
     "nodemon": "^2.0.4",
     "say": "^0.16.0",
-    "talkify-tts": "^3.0.0",
     "trello-node-api": "0.0.9"
+  },
+  "engines": {
+    "node": "^12.16.1",
+    "npm": "^6.13.4"
   }
 }
