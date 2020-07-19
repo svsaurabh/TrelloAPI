@@ -29,5 +29,9 @@ router.get('/searchCheckList', (req, res) => {
     trelloController.searchCheckList(req, res);
 })
 
+router.post('/createCard', (req, res) => {
+    trelloController.createCard(req, res);
+})
+
 
 module.exports = router;
