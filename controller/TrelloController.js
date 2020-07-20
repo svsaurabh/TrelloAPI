@@ -25,3 +25,7 @@ exports.searchCheckList = (req, res) => {
 exports.createCard = (req, res) => {
     trelloCardService.createCard(req, res);
 }
+
+exports.searchCard = (req, res) => {
+    trelloCardService.searchCard(req, res);
+}

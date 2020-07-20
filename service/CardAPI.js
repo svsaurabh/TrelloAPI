@@ -16,6 +16,16 @@ exports.createCard = (req, res) => {
         //     }
         // });
         console.log('response ', response);
+        res.send(response);
+    }).catch(function (error) {
+        console.log('error', error);
+    });
+}
+
+exports.searchCard = (req, res) => {
+    trelloNode.card.search('5f1442192d067e4cdfbada0a').then(function (response) {
+        console.log('response ', response);
+        res.send(response);
     }).catch(function (error) {
         console.log('error', error);
     });

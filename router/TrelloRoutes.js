@@ -33,5 +33,8 @@ router.post('/createCard', (req, res) => {
     trelloController.createCard(req, res);
 })
 
+router.get('/searchCard', (req, res) => {
+    trelloController.searchCard(req, res);
+})
 
 module.exports = router;

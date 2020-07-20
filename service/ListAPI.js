@@ -9,13 +9,14 @@ exports.createCheckList = (req,res) => {
         pos: 'top'
     };
     trelloNode.list.create(data).then(function (response) {
-        voiceData = "A new checklist has been created successfully";
-            say.speak(voiceData, 1.0, (err) => {
-                if (err) {
-                return console.error(err)
-                }
-            });
+        // voiceData = "A new checklist has been created successfully";
+        //     say.speak(voiceData, 1.0, (err) => {
+        //         if (err) {
+        //         return console.error(err)
+        //         }
+        //     });
             console.log('response ', response);
+            res.send(response);
         }).catch(function (error) {
             console.log('error', error);
         });
@@ -23,13 +24,14 @@ exports.createCheckList = (req,res) => {
 
 exports.searchCheckList = (req, res) => {
     trelloNode.list.search(req.query.id).then(function (response) {
-        voiceData = "The checklist has been searched successfully";
-        say.speak(voiceData, 1.0, (err) => {
-            if (err) {
-            return console.error(err)
-            }
-        });
+        // voiceData = "The checklist has been searched successfully";
+        // say.speak(voiceData, 1.0, (err) => {
+        //     if (err) {
+        //     return console.error(err)
+        //     }
+        // });
         console.log('response ', response);
+        res.send(response);
     }).catch(function (error) {
         console.log('error', error);
     });
