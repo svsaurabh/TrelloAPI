@@ -2,10 +2,10 @@ var trelloNode = require('trello-node-api')('60b27d31e9f987aa774cfef8a80d0bc5', 
 const say = require('say')
 
 exports.createCheckList = (req,res) => {
-    let voiceData = "";
+    //let voiceData = "";
     let data = {
         name: req.body.checklistName,
-        idBoard: '5f119777a299d707410a9b94',
+        idBoard: req.body.boardId,
         pos: 'top'
     };
     trelloNode.list.create(data).then(function (response) {

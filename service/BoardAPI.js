@@ -24,7 +24,7 @@ exports.createBoard = (req, res) => {
 }
 
 exports.updateBoard = (req, res) => {
-    var id = '5f11593ce073d4713a10b3da';
+    var id = req.body.boardId;
      var data = {
          name: req.body.boardName,
          desc: req.body.desc
@@ -44,7 +44,7 @@ exports.updateBoard = (req, res) => {
 }
 
 exports.deleteBoard = (req,res) => {
-    trelloNode.board.del(req.body.boardName).then(function (response) {
+    trelloNode.board.del(req.body.boardId).then(function (response) {
         // voiceData = "Your board has been deleted successfully";
         // say.speak(voiceData, 1.0, (err) => {
         //     if (err) {

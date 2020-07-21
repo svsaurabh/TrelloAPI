@@ -5,7 +5,7 @@ exports.createCard = (req, res) => {
         name: req.body.name,
         desc: req.body.description,
         pos: 'top',
-        idList: '5f11a3b3c2e3ec73f963348b',
+        idList: req.body.listId,
     };
     trelloNode.card.create(data).then(function (response) {
         // voiceData = "Your board with name" + response.name + "has been created successfully";
@@ -22,7 +22,7 @@ exports.createCard = (req, res) => {
 }
 
 exports.searchCard = (req, res) => {
-    trelloNode.card.search('5f1442192d067e4cdfbada0a').then(function (response) {
+    trelloNode.card.search(req.query.cardId).then(function (response) {
         console.log('response ', response);
         res.send(response);
     }).catch(function (error) {
