@@ -1,0 +1,32 @@
+{
+  "name": "TrelloAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dineshanand001/TrelloAPI.git"
+  },
+  "keywords": [],
+  "author": "Dinesh Ananthan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dineshanand001/TrelloAPI/issues"
+  },
+  "homepage": "https://github.com/Dineshanand001/TrelloAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4",
+    "say": "^0.16.0",
+    "trello-node-api": "0.0.9"
+  },
+  "engines": {
+    "node": "^12.16.1",
+    "npm": "^6.13.4"
+  }
+}
